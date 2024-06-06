@@ -1,0 +1,73 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airport Search Engine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="css/ico/travel16x16.ico">
+    <link rel="stylesheet" href="css/index.css" />
+    <!--Do not move the lines below-->
+    <script src="./dist/DO_NOT_TOUCH.js"></script>
+    <script defer src="./dist/utils.js"></script>
+    <script defer src="./dist/index.js"></script>
+  </head>
+  <body>
+    <main class="left-side-search-section">
+      <h1 class="left-side-giant-title">
+        Airport... <br>
+        <span class="left-side-giant-title-bolded">
+          search<br>
+          engine
+        </span>
+      </h1>
+      <section class="left-side-search-bar-box">
+        <div class="left-side-search-bar-guide-prompt">
+          Search for an airport and press 
+          <span class="left-side-search-bar-guide-prompt-bolded">&nbsp;ENTER</span> 
+          <i class="left-side-search-bar-guide-prompt-icon"></i>
+        </div>
+        <div class="left-side-search-input-box">
+          <div id="searchInputContainer" class="left-side-search-input">
+            <i class="left-side-search-input-icon"></i>
+            <input type="text" class="left-side-search-text-input" id="searchInput" placeholder="E.x Pleasant Hill Airport"/>
+          </div>
+          <div class="left-side-search-type-dropdown">
+            <button class="left-side-search-type-dropdown-button">
+              <i class="left-side-search-type-dropdown-button-icon"></i>
+              <p class="left-side-search-type-dropdown-button-text" id="searchByIdentifier">Name</p>
+            </button>
+            <div class="left-side-search-type-dropdown-content">
+              <button class="left-side-search-type-dropdown-content-filters" id="searchByCountry">Country</button>
+              <button class="left-side-search-type-dropdown-content-filters" id="searchByType">Type</button>
+              <button class="left-side-search-type-dropdown-content-filters" id="searchByIdent">#ID</button>
+              <button class="left-side-search-type-dropdown-content-filters" id="searchByName">Name</button>
+            </div>
+          </div>
+        </div>
+        <div class="bonuses-box">
+          <p class="bonuses-prompt">Feeling juicy? Check out some bonuses!</p>
+          <div class="bonuses-buttons-box">
+            <a href="cumulativeDistance.html" class="bonus-buttons">Great Circle Distance and Transfer 🌴</a>
+          </div>
+          <div class="bonuses-buttons-box">
+            <a href="allAirports.html" class="bonus-buttons">See every airport 🥥</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <aside class="right-side-search-results-section">
+      <section class="right-side-search-results-box" id="searchResultDisplayBoard">
+        <div class="right-side-no-search-results-box" id="noResultsPopup">
+          <div class="right-side-no-search-results-picture"></div>
+          <p class="right-side-no-search-results-title">You missed your flight, search something up! ... please.</p>
+        </div>
+      </section>
+      <div class="right-side-search-result-timer-box">
+        <i class="right-side-search-result-icon"></i>
+        <p class="right-side-search-result-timer-text" id="searchResultTimer">Items searched in 0ms </p>
+      </div>
+    </aside>
+  </body>
+</html>

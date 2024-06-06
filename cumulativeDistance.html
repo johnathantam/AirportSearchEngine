@@ -1,0 +1,72 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Total Distances</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="css/ico/travel16x16.ico">
+    <link rel="stylesheet" href="css/cumulativeDistance.css" />
+    <!--Do not move the lines below-->
+    <script src="./dist/DO_NOT_TOUCH.js"></script>
+    <script defer src="./dist/utils.js"></script>
+    <script defer src="./dist/cumulativeDistance.js"></script>
+  </head>
+  <body>
+    <main class="left-side-distance-section">
+      <h1 class="left-side-giant-title">
+        Airport... <br>
+        <span class="left-side-giant-title-bolded">
+          distance<br>
+          finder
+        </span>
+      </h1>
+      <section class="left-side-distance-bar-box">
+        <div class="left-side-distance-bar-guide-prompt">
+          Enter IDs separated by commas, then press
+          <span class="left-side-distance-bar-guide-prompt-bolded">&nbsp;ENTER</span> 
+          <i class="left-side-distance-bar-guide-prompt-icon"></i>
+        </div>
+        <div class="left-side-distance-input-box">
+          <div id="distanceInputContainer" class="left-side-distance-input">
+            <i class="left-side-distance-input-icon"></i>
+            <input type="text" class="left-side-distance-text-input" id="distanceInput" placeholder="E.x 12JY, 13M"/>
+          </div>
+        </div>
+        <div class="bonuses-box">
+          <p class="bonuses-prompt">
+            We'll find the distance, say if you input "12JY, 13M, 28NC," we'll determine <br> 
+            the total distance traveled from 12JY to 13M and from 13M to 28NC, and <br> 
+            also provide the displacement from 12JY to 28NC.
+          </p>
+          <div class="bonuses-buttons-box">
+            <a href="index.html" class="bonus-buttons">Go back... 😔</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <aside class="right-side-distance-results-section">
+      <section class="right-side-distance-results-box" id="distanceResultDisplayBoard">
+        <div class="right-side-no-distance-results-box" id="noResultsPopup" style="display:none">
+          <div class="right-side-no-distance-results-picture"></div>
+          <p class="right-side-no-distance-results-title">Nothing here, make sure your ID's are typed <br> correctly, are open and are of the same type.</p>
+        </div>
+        <div id="distanceAndDisplacementBox">
+          <div class="right-side-total-distance-box" id="right-side-total-distance" >
+            <h1 class="right-side-total-distance-title">Total Distance</h1>
+            <h1 class="right-side-total-distance-statistic" id="distanceStatistic">0km</h1>
+          </div>
+          <div class="right-side-total-distance-box" id="right-side-total-displacement">
+            <h1 class="right-side-total-distance-title">Total Displacement</h1>
+            <h1 class="right-side-total-distance-statistic" id="displacementStatistic">0km</h1>
+          </div>
+        </div>
+      </section>
+      <div class="right-side-distance-result-timer-box">
+        <i class="right-side-distance-result-icon"></i>
+        <p class="right-side-distance-result-timer-text" id="distanceResultTimer">Distance found in 0ms</p>
+      </div>
+    </aside>
+  </body>
+</html>

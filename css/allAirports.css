@@ -1,0 +1,348 @@
+/* EVERYONE DON'T WORRY ABOUT MOBILE VIEW JUST DO DESKTOP (not screaming btw) */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend", sans-serif;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.left-side-sort-section {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Classes for the title "AIRPORT SORT ENGINE" */
+.left-side-giant-title {
+  margin-left: 5%;
+  font-size: 600%;
+  font-weight: 220;
+}
+
+.left-side-giant-title-bolded {
+  font-weight: bold;
+}
+
+.left-side-sort-bar-box {
+  margin-left: 5%;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Classes for the text "sort for an airport" */
+.left-side-sort-bar-guide-prompt {
+  font-size: 95%;
+  font-weight: 250;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.left-side-sort-bar-guide-prompt-bolded {
+  font-weight: bold;
+}
+
+.left-side-sort-bar-guide-prompt-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(./icons/EnterKey.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-left: 0.4%;
+}
+
+/* Classes for the sort type dropdown (sort by name, country, etc) */
+.left-side-sort-type-dropdown {
+  width: 60%;
+  position: relative;
+  margin-top: 2%;
+}
+
+.left-side-sort-type-dropdown-button {
+  width: 100%;
+  height: 100%;
+  border: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.left-side-sort-type-dropdown-button-icon {
+  width: 19px;
+  height: 19px;
+  margin-left: 4%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(./icons/DropDown.svg);
+}
+
+.left-side-sort-type-dropdown-button-text {
+  font-size: 100%;
+  font-weight: 350;
+  margin-left: 10%;
+}
+
+.left-side-sort-type-dropdown-content {
+  display: none;
+  position: absolute;
+  width: calc(100% - 3px);
+  margin-top: 0.3%;
+  border-style: solid;
+  border-width: 2px;
+  font-size: 100%;
+  font-weight: 350;
+  z-index: 999;
+}
+
+.left-side-sort-type-dropdown-content-filters {
+  width: 100%;
+  height: 15%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+}
+
+/* Show dropdown content when dropdown is hovered with animations */
+.left-side-sort-type-dropdown:hover .left-side-sort-type-dropdown-content {
+  display: block;
+  animation: dropdown-content-hovered-animation 0.1s ease forwards;
+}
+
+.left-side-sort-type-dropdown:hover .left-side-sort-type-dropdown-button-icon {
+  animation: dropdown-icon-hovered-animation 0.1s ease forwards;
+}
+
+.left-side-sort-type-dropdown-content-filters:hover {
+  background-color: rgb(234, 244, 249);
+}
+
+@keyframes dropdown-content-hovered-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dropdown-icon-hovered-animation {
+  0% {
+      
+  }
+  100% {
+      transform: rotateZ(180deg);
+  }
+}
+
+/* Classes for sort type checkboxes for ascending or descending */
+.sort-by-ascending-or-descending-box {
+  margin-top: 1.4%;
+  display: flex;
+  gap: 2%;
+}
+
+.sort-by-ascending-or-descending-container {
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 85%;
+  font-weight: 200;
+}
+
+/* Style for the custom checkbox */
+.sort-by-ascending-or-descending-container input[type="checkbox"] {
+  display: none; /* Hide the default checkbox */
+}
+
+.sort-by-ascending-or-descending-container label {
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.sort-by-ascending-or-descending-container label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 12px;
+  height: 12px;
+  border: 1.5px solid #000000;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.sort-by-ascending-or-descending-container input[type="checkbox"]:checked + label:before {
+  background-color: #000000; /* Change to desired color */
+  box-shadow: inset 0 0 0 2px #ffffff; /* Apply inner black line box shadow */
+}
+
+/* Show the checkmark when the checkbox is checked */
+.sort-by-ascending-or-descending-container input[type="checkbox"]:checked + label:after {
+  visibility: visible;
+}
+
+/* Classes for bonus buttons */
+.bonuses-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 7.5%;
+}
+
+.bonuses-prompt {
+  font-size: 85%;
+  font-weight: 250;
+}
+
+.bonuses-buttons-box {
+  display: flex;
+  gap: 1%;
+}
+
+.bonus-buttons {
+  padding: 1%;
+  font-size: 80%;
+  font-weight: 250;
+  margin-top: 2%;
+  border: none;
+  cursor: pointer;
+  background-color: #E6DFEC;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+}
+
+.bonus-buttons:hover {
+  background-color: rgb(158, 224, 255);
+}
+
+/* Classes for the right side sort result section */
+.right-side-sort-results-section {
+  width: 50%;
+  height: 100%;
+  background-color: rgb(230, 230, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-side-sort-results-box {
+  width: 95%;
+  height: 75%;
+  padding-bottom: 1%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.right-side-sort-results-tabular-results-box {
+  width: 100%;
+  height: 90%;
+  background-color: rgb(255, 255, 255);
+  overflow-y: scroll;
+}
+
+/* Classes for sort result titles (name, type, etc) */
+.right-side-sort-result-tabular-row {
+  width: 100%;
+  min-height: 10%;
+  table-layout: fixed;
+  border-bottom: solid;
+  background: rgb(240, 240, 255);
+}
+
+.right-side-sort-result-tabular-row:nth-child(even) {
+  background:rgb(225, 225, 255)
+}
+
+.right-side-sort-result-tabular-title {
+  border-right: solid;
+  border-color: rgb(131, 131, 131);
+  border-width: 1px;
+  text-align: center;
+  font-size: 93%;
+}
+
+.right-side-sort-result-tabular-title:last-child {
+  border-right: none;
+}
+
+.sorted-tabular-item {
+  border-right: solid;
+  border-color: rgb(131, 131, 131);
+  border-width: 1px;
+  text-align: left; 
+  padding-left: 1%;
+  padding-right: 1%;
+  font-size: 70%;
+  overflow: hidden; /* Hide overflowing content */
+  text-overflow: ellipsis; /* Display ellipsis for overflowed content */
+  background-color: transparent;
+}
+
+.sorted-tabular-item:last-child {
+  border-right: none;
+}
+
+/* Classes for load more button */
+.right-side-sort-result-load-more-button {
+  display: block;
+  border: none;
+  border-radius: 25px;
+  padding: 1.5% 5%; 
+  background-color: rgb(83, 53, 255);
+  margin: 5% auto;
+  box-shadow: 0 0px 15px rgb(140, 140, 238);
+  color: #8b9aff;
+}
+
+.right-side-sort-result-load-more-button:hover {
+  background-color: rgb(100, 85, 239);
+  color: rgb(74, 176, 224);
+  cursor: pointer;
+}
+
+/* Classes for the milisecond sort timer */
+.right-side-sort-result-timer-box {
+  width: 85%;
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+}
+
+.right-side-sort-result-icon {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(./icons/Timer.svg);
+}
+
+.right-side-sort-result-timer-text {
+  font-size: 80%;
+  font-weight: 250;
+  margin-left: 1%;
+}

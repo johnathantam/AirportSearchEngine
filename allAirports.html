@@ -1,0 +1,81 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Airport List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="css/ico/travel16x16.ico">
+    <link rel="stylesheet" href="css/allAirports.css" />
+    <!--Do not move tde lines below-->
+    <script src="./dist/DO_NOT_TOUCH.js"></script>
+    <script defer src="./dist/utils.js"></script>
+    <script defer src="./dist/allAirports.js"></script>
+  </head>
+  <body>
+    <main class="left-side-sort-section">
+      <h1 class="left-side-giant-title">
+        Airport... <br>
+        <span class="left-side-giant-title-bolded">
+          sort<br>
+          engine
+        </span>
+      </h1>
+      <section class="left-side-sort-bar-box">
+        <div class="sort-by-ascending-or-descending-box ">
+          <div class="sort-by-ascending-or-descending-container">
+            <input type="checkbox" id="sortByAscendingCheckbox" checked="true">
+            <label for="sortByAscendingCheckbox">Sorting ascendingly</label>
+          </div>
+          <div class="sort-by-ascending-or-descending-container">
+            <input type="checkbox" id="sortByDescendingCheckbox">
+            <label for="sortByDescendingCheckbox">Sorting descendingly</label>
+          </div>
+        </div>
+        <div>
+          <div class="left-side-sort-type-dropdown">
+            <button class="left-side-sort-type-dropdown-button">
+              <i class="left-side-sort-type-dropdown-button-icon"></i>
+              <p class="left-side-sort-type-dropdown-button-text" id="sortByIdentifier">Name</p>
+            </button>
+            <div class="left-side-sort-type-dropdown-content">
+              <button class="left-side-sort-type-dropdown-content-filters" id="sortByCountry">Country</button>
+              <button class="left-side-sort-type-dropdown-content-filters" id="sortByType">Type</button>
+              <button class="left-side-sort-type-dropdown-content-filters" id="sortByIdent">#ID</button>
+              <button class="left-side-sort-type-dropdown-content-filters" id="sortByName">Name</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="bonuses-box">
+          <p class="bonuses-prompt">Search more specifically?</p>
+          <div class="bonuses-buttons-box">
+            <a href="index.html" class="bonus-buttons">Go back... 💖</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <aside class="right-side-sort-results-section">
+      <section class="right-side-sort-results-box">
+        <table class="right-side-sort-result-tabular-row" style="padding-right: 17px">
+          <tr>
+            <td class="right-side-sort-result-tabular-title">Name</td>
+            <td class="right-side-sort-result-tabular-title">Type</td>
+            <td class="right-side-sort-result-tabular-title">Ident</td>
+            <td class="right-side-sort-result-tabular-title">Country</td>
+            <td class="right-side-sort-result-tabular-title">Region</td>
+            <td class="right-side-sort-result-tabular-title">Latitude</td>
+            <td class="right-side-sort-result-tabular-title">Longitude</td>
+            <td class="right-side-sort-result-tabular-title">Continent</td>
+          </tr>
+        </table>
+        <div class="right-side-sort-results-tabular-results-box" id="sortResultDisplayBoard"></div>
+      </section>
+      <div class="right-side-sort-result-timer-box">
+        <i class="right-side-sort-result-icon"></i>
+        <p class="right-side-sort-result-timer-text" id="sortResultTimer">Items sorted in 0ms </p>
+      </div>
+    </aside>
+  </body>
+</html>
